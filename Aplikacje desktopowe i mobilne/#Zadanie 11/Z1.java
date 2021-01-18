@@ -16,6 +16,10 @@ public class Z1 {
                 in.next();
                 poprawna = true;
             }
+            if(n<=0){
+                System.out.println("Nieprawidlowa wartosc!");
+                poprawna = true;
+            }
         } while (poprawna);
         boolean[][] a = new boolean[n][n];
         for (int i = 0; i < n; i++) {
