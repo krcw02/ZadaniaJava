@@ -10,7 +10,7 @@ public class Z1 {
 
         System.out.println("##########");
         System.out.println("testSort: ");
-        for(int i = 0; i<tab.length;i++)System.out.print(tabTestSort[i]+" ");
+        // for(int i = 0; i<tab.length;i++)System.out.print(tabTestSort[i]+" ");
         System.out.println("Czas wykonywania: "+(stop-start));
         System.out.println("##########");
 
@@ -30,6 +30,21 @@ public class Z1 {
     static int[] testSort(int[] tab){
 
         Arrays.sort(tab);
+
+        return tab;
+    }
+    static int[] babelkowe(int[] tab){
+
+        int x;
+        for (int i = 0; i < tab.length - 1; i++){       
+            for (int j = 0; j < tab.length - 1; j++){
+                if(tab[j] > tab[j + 1]){
+                    x = tab[j];
+                    tab[j] = tab[j + 1];
+                    tab[j + 1] = x;
+                    }
+                 }
+           }    
 
         return tab;
     }
