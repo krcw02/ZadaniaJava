@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <form action="" style="text-align:right;width: 400px;">
+
+        Długość podstawy: <input type="number" name="dlugoscPodstawy" id="dlugoscPodstawy" onchange="obliczanie()"><br>
+        Szerokość podstawy: <input type="number" name="szerokoscPodstawy" id="szerokoscPodstawy" onchange="obliczanie()"><br>
+        Wyskokość: <input type="number" name="wysokosc" id="wysokosc" onchange="obliczanie()"><br>
+
+        Objetość: <input type="number" name="objetosc" id="objetosc"><br>
+        Pole polePowierzchni: <input type="number" name="polePowierzchni" id="polePowierzchni"><br>
+        Suma  długości krawedzi: <input type="number" name="sumaKrawedzi" id="sumaKrawedzi"><br>
+
+
+    </form>
+
+    <script>
+
+
+        function obliczanie() {
+            let a = parseInt(document.querySelector("#dlugoscPodstawy").value);
+            let b = parseInt(document.querySelector("#szerokoscPodstawy").value);
+            let h = parseInt(document.querySelector("#wysokosc").value);
+
+            if (!isNaN(a) || !isNaN(b) || !isNaN(h)) {
+                document.querySelector("#objetosc").value = a * b * h;
+                document.querySelector("#polePowierzchni").value = (2 * a * b) + (2 * a * h) + (2 * b * h);
+                document.querySelector("#sumaKrawedzi").value = (4 * a) + (4 * h) + (4 * b);
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
