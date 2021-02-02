@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+
+        Imie i nazwisko: <input type="text" name="name" class="name"><br>
+        <input type="radio" name="klasa" class="klasa" value="1it">1it<br>
+        <input type="radio" name="klasa" class="klasa" value="1ct">1ct<br>
+        <input type="radio" name="klasa" class="klasa" value="1tt">1tt<br><br>
+        <input type="button" value="Wyślij" onclick="f()">
+    </form>
+    <div class="wynik"></div>
+
+    <script>
+        function f() {
+            let name = document.getElementsByClassName("name")[0].value;
+            let klasa;
+
+            for (let i = 0; i < 3; i++) {
+                if (document.getElementsByClassName("klasa")[i].checked)
+                    klasa = document.getElementsByClassName("klasa")[i].value;
+            }
+
+            document.querySelector(".wynik").innerHTML = `${name} ${klasa}`;
+
+        }
+
+
+    </script>
+</body>
+
+</html>
