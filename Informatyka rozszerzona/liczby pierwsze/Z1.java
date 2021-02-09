@@ -11,7 +11,7 @@ class Z1 {
                 System.out.println("Wprowadz wartosc: ");
                 x = in.nextInt();
             } catch (Exception e) {
-                System.err.println("Blad: " + e);
+                
                 in.next();
                 walidacja = true;
             } finally {
