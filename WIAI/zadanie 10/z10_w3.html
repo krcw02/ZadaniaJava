@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="4b616d696c204b727973746f77736b69">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    bok a: <input type="text" id="bok_a"><br>
+    bok b: <input type="text" id="bok_b"><br><br>
+
+    <input type="button" value="pole" id="pole">
+    <input type="button" value="obwod" id="obwod"><br><br>
+
+    <div class="wynik_pole"></div>
+    <div class="wynik_obwod"></div>
+
+    <script>
+
+        const button_pole = document.querySelector("#pole");
+        const button_obwod = document.querySelector("#obwod");
+
+        button_pole.addEventListener("click", pole);
+        button_obwod.addEventListener("click", obwod);
+
+        function pole() {
+            const bok_a = parseInt(document.querySelector("#bok_a").value);
+            const bok_b = parseInt(document.querySelector("#bok_b").value);
+
+            document.querySelector(".wynik_pole").innerHTML = `Pole: ${bok_a * bok_b}`;
+        }
+
+        function obwod() {
+            const bok_a = parseInt(document.querySelector("#bok_a").value);
+            const bok_b = parseInt(document.querySelector("#bok_b").value);
+
+            document.querySelector(".wynik_obwod").innerHTML = `Obwód: ${(bok_a + bok_b) * 2}`;
+        }
+
+    </script>
+</body>
+
+</html>
