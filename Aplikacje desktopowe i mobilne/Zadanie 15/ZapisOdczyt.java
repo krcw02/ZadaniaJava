@@ -18,10 +18,8 @@ public class ZapisOdczyt {
         ListaZamowien z = new ListaZamowien();
         try {
             pl = new ObjectInputStream(new FileInputStream(nazwaPliku));
-
-            while (true) {
-                z = (ListaZamowien) pl.readObject();
-            }
+            z = (ListaZamowien) pl.readObject();
+            
 
         } catch (Exception e) {
             System.out.println("Blad przy odczycie pliku");

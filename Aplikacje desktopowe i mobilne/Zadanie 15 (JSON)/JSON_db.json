@@ -1,0 +1,54 @@
+{
+    "ileDodanych": 3,
+    "zamowienia": [
+        {
+            "ileDodanych": 2,
+            "maksRozmiar": 10,
+            "pozycja": [
+                {
+                    "nazwaTowaru": "Chleb",
+                    "ileSztuk": 1,
+                    "cena": 3.5
+                },
+                {
+                    "nazwaTowaru": "Cukier",
+                    "ileSztuk": 2,
+                    "cena": 4.0
+                }
+            ]
+        },
+        {
+            "ileDodanych": 3,
+            "maksRozmiar": 15,
+            "pozycja": [
+                {
+                    "nazwaTowaru": "Baton",
+                    "ileSztuk": 2,
+                    "cena": 1.2
+                },
+                {
+                    "nazwaTowaru": "Mleko",
+                    "ileSztuk": 7,
+                    "cena": 2.2
+                },
+                {
+                    "nazwaTowaru": "Banany",
+                    "ileSztuk": 4,
+                    "cena": 2.0
+                }
+            ]
+        },
+        {
+            "ileDodanych": 1,
+            "maksRozmiar": 5,
+            "pozycja": [
+                {
+                    "nazwaTowaru": "Ciasto",
+                    "ileSztuk": 5,
+                    "cena": 8.0
+                }
+            ]
+        }
+    ],
+    "maksRozmiar": 10
+}

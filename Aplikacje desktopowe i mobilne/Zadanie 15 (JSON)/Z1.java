@@ -1,7 +1,7 @@
 import java.io.IOException;
 
 class Z1 {
-    public static void main(String[] args) throws IOException, ClassNotFoundException {
+    public static void main(String[] args) throws IOException {
 
         ListaZamowien listaZamowien = new ListaZamowien();
 
@@ -30,10 +30,14 @@ class Z1 {
         listaZamowien.dodajZamowienie(z3);
        
 
-        ZapisOdczyt.zapis("db.dat", listaZamowien);
+        ZapisOdczyt.zapis("JSON_db.json", listaZamowien);
 
-        ListaZamowien x = ZapisOdczyt.odczyt("db.dat");
+        ListaZamowien x = ZapisOdczyt.odczyt("JSON_db.json");
         System.out.println(x);
+
+        
+        
+
 
     }
 }
