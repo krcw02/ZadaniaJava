@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .galeria>img {
+            height: 16vw;
+            cursor: pointer;
+        }
+
+        .informacje {
+            margin-top: 80px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="galeria">
+        <img src="img/1.jpg">
+        <img src="img/2.jpg">
+        <img src="img/3.jpg">
+        <img src="img/4.jpg">
+    </div>
+    <div class="informacje"></div>
+
+    <script>
+        const informacje = [{
+            tytul: "Mona Lisa, Leonardo da Vinci",
+            zrodlo: "Luwr",
+            opis: `Mona Lisa: najsłynniejszy obraz świata i jeden z najbardziej cenionych obrazów epoki renesansu. Namalowany przez włoskiego malarza Leonardo da Vinci na początku XVI wieku na zamówienie bogatego florenckiego kupca Francesca Giocondo (stąd tytuł La Gioconda). Zagadkowy uśmiech modelki, prawdopodobnie żony zamawiającego imieniem Lisa Gherardini, od pięciuset lat stanowi zagadkę, której nie mogą rozwiązać ani naukowcy, ani artyści. Obraz znajduje się obecnie w paryskim Luwrze. (olej na drewnie).`,
+            src: "img/1.jpg"
+        }, {
+            tytul: "Narodziny Wenus, Sandro Botticelli",
+            zrodlo: "Galeria Uffizi",
+            opis: "Narodziny Wenus: obraz namalowany przez włoskiego malarza Sandro Botticelli prawdopodobnie w 1478 roku na zlecenie rodziny Medyceuszy. Artysta sięgnął do motywów mitologicznych. Malując narodziny najpiękniejszej z bogiń, stworzył wzór piękna kobiecego ciała. Znajduje się w Galerii Uffizi we Florencji. (tempera na płótnie).",
+            src: "img/2.jpg"
+        }, {
+            tytul: "Stworzenie Adama, Michał Anioł",
+            zrodlo: "Kaplica Sykstyńska",
+            opis: "Stworzenie Adama – słynny fresk Michała Anioła przedstawiający scenę z Księgi Rodzaju, w której Bóg daje życie Adamowi, pierwszemu człowiekowi. Jest to jedno z najbardziej znanych dzieł sztuki na świecie. Bóg Jahwe wysuwa ramię, aby przekazać iskrę życia do palca Adama. Fresk namalowany około 1511 roku znajduje się w Kaplicy Sykstyńskiej w Watykanie.",
+            src: "img/3.jpg"
+        }, {
+            tytul: "Ostatnia wieczerza, Leonardo da Vinci",
+            zrodlo: "Santa Maria delle Grazie",
+            opis: "Ostatnia Wieczerza: malowidło ścienne namalowane przez włoskiego malarza epoki renesansu Leonarda da Vinci. Obraz wykonano w klasztorze przy Santa Maria delle Grazie w Mediolanie na zamówienie księcia Mediolanu Ludovico Sforzy. Fresk przedstawia moment, w którym Jezus ogłasza, iż jeden z apostołów go zdradzi (Judasz to czwarta postać od lewej).",
+            src: "img/4.jpg"
+        }];
+
+        let img = document.querySelectorAll(".galeria > img");
+
+        img.forEach((e, i) => {
+
+            e.addEventListener("click", () => {
+                document.querySelector(".informacje").innerHTML = `
+                <h1>${informacje[i].tytul}</h1>
+                    <p>${informacje[i].zrodlo}</p>
+                `;
+            });
+
+            e.addEventListener("mouseover", () => {
+                document.querySelector(".informacje").innerHTML = `
+                <p>${informacje[i].opis}</p>
+                <img src="${informacje[i].src}">`;
+            });
+        });
+
+
+
+    </script>
+</body>
+
+</html>

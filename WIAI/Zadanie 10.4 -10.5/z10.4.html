@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form>
+        <input class="a1" value="a1">
+        <input class="a2" value="a2">
+
+    </form>
+
+    <script>
+
+        const a1 = document.querySelector(".a1");
+        const a2 = document.querySelector(".a2");
+
+        a1.addEventListener("click",() => {zmiana(a1)});
+        a2.addEventListener("click",() => {zmiana(a2)});
+        
+
+        function zmiana(e){
+            e.style.fontFamily = 'cursive';
+            e.style.fontWeight = "bold";
+            e.style.color = "green";
+        }
+
+    </script>
+</body>
+
+</html>
