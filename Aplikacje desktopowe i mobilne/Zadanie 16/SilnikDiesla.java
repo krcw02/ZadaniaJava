@@ -1,4 +1,4 @@
-public class SilnikDisla implements Silnik{
+public class SilnikDiesla implements Silnik {
 
     @Override
     public String getSilnik() {
