@@ -1,21 +1,45 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        function test() {
+            let form = document.querySelector(".form");
+            wzory = {
+                "imie": /^[A-Z][a-z]{2,}$/,
+                "nazwisko": /^[A-Z][a-z]{2,}$/,
+                "email": /^[0-9a-zA-Z_.-]+@[0-9a-zA-Z.-]+.[a-zA-Z]{2,3}$/,
+                "pesel": /^[0-9]{11}$/,
+                "telefon": /^[+]+[0-9]{11}$/
+            };
+            for (let pole in wzory) {
+                if (form[pole]) {
+                    if (!wzory[pole].test(form[pole].value)) {
+                        alert(`Pole ${pole} ma nieprawidłową wartość`);
+                        return false;
+                    }
+                }
+            }
+            alert("Wszystkie pola poprawne");
+            return true;
+        }
+    </script>
 </head>
+
 <body>
-    <form class="formularz">
+    <form class="form">
         Imię: <br><input type="text" name="imie" id="imie"> <br>
         Nazwisko: <br><input type="text" name="nazwisko" id="nazwisko"><br>
         e-mail: <br><input type="email" name="email" id="email"><br>
         PESEL: <br><input type="text" name="pesel" id="pesel"><br>
         Numer telefonu: <br><input type="tel" name="telefon" id="telefon">
-    </form>    
-        <button class="wyslij">Wyślij</button>
+    </form>
+    <button class="wyslij" onclick="test()">Wyślij</button>
     
-    <script src="script.js"></script>
 </body>
+
 </html>
